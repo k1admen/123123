@@ -250,3 +250,31 @@ footer {
 .theme-toggle:hover {
     transform: scale(1.1);
 }
+.lang-select {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.active-link {
+    background: rgba(255,255,255,0.16);
+    font-weight: 700;
+    border-left: 2px solid var(--accent);
+}
+
+.menu-items a {
+    transition: background 0.2s ease;
+}
