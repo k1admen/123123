@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape from Island — Devlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="menu">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="theme-toggle" aria-label="Toggle theme"><span class="icon">🌙</span></button>
+    <select id="langSelect" class="lang-select" aria-label="Language switcher">
+        <option value="cs">CS</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+    </select>
+    <div class="menu-items">
+        <a href="index.html" data-i18n="nav_home">Hlavní</a>
+        <a href="about.html" data-i18n="nav_about">O hře</a>
+        <a href="gallery.html" data-i18n="nav_gallery">Galerie</a>
+        <a href="download.html" data-i18n="nav_download">Stáhnout</a>
+        <a href="roadmap.html" data-i18n="nav_roadmap">Roadmap</a>
+        <a href="devlog.html" data-i18n="nav_devlog">Devlog</a>
+    </div>
+</nav>
+
+<header class="fade-in">
+    <h1 data-i18n="devlog_title">Devlog</h1>
+</header>
+
+<section class="card fade-in">
+    <p data-i18n="devlog_entry_1">2026-05-28: Multi-page structure, i18n, accessibility updates.</p>
+    <p data-i18n="devlog_entry_2">2026-05-20: Core atmosphere pass and puzzle prototyping.</p>
+</section>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
