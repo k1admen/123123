@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const STORAGE_KEYS = {
-        lang: "lang",
-        theme: "theme"
-    };
-
     const elements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -36,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             link.setAttribute("aria-current", "page");
         }
     });
+
+    }
 
     const btn = document.getElementById("infoBtn");
     const text = document.getElementById("infoText");
@@ -81,6 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
         themeBtn.addEventListener("click", () => {
             const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
             applyTheme(nextTheme);
+    if (themeBtn && icon) {
+        themeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            icon.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
         });
     }
 
@@ -101,6 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (langSelect) {
         const saved = localStorage.getItem(STORAGE_KEYS.lang) || "cs";
+        localStorage.setItem("lang", lang);
+    };
+
+    if (langSelect) {
+        const saved = localStorage.getItem("lang") || "cs";
         langSelect.value = saved;
         applyLanguage(saved);
         langSelect.addEventListener("change", e => applyLanguage(e.target.value));

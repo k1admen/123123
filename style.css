@@ -268,13 +268,3 @@ textarea {
     color: var(--text);
     border: 1px solid rgba(255,255,255,0.2);
 }
-
-.active-link {
-    background: rgba(255,255,255,0.16);
-    font-weight: 700;
-    border-left: 2px solid var(--accent);
-}
-
-.menu-items a {
-    transition: background 0.2s ease;
-}
