@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <title>Escape from Island</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== MENU ===== -->
+<nav class="menu">
+    <button class="menu-toggle">☰</button>
+<button class="theme-toggle">
+    <span class="icon">🌙</span>
+</button>
+    <div class="menu-items">
+        <a href="#">Hlavní</a>
+        <a href="#about">O hře</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#download">Stáhnout</a>
+    </div>
+</nav>
+
+<!-- ===== Nazev + zjistit vic ===== -->
+<header class="fade-in">
+    <h1>Escape from Island</h1>
+    <p>Atmosférická stealth adventura o útěku z tajemného ostrova</p>
+    <button class="btn" id="infoBtn">Zjistit více</button>
+    <div class="more-text" id="infoText">
+        <p>
+            Hra klade důraz na atmosféru, napětí a pomalé odhalování příběhu.
+            Každé místo na ostrově skrývá nové informace a možné cesty k útěku.
+        </p>
+    </div>
+</header>
+
+<!-- ===== Hlavni obrazek ===== -->
+<section class="hero fade-in delay">
+   <img src="nazvanie.png" alt="Hlavní obrázek hry">
+</section>
+
+<!-- ===== informace o hre ===== -->
+<section id="about" class="card fade-in">
+    <h2>O hře</h2>
+    <p>
+        Escape from Island je temná příběhová hra, ve které se hráč ocitá
+        na izolovaném ostrově plném tajemství, nebezpečí a skrytých důkazů.
+        Hráč musí prozkoumávat prostředí, řešit hádanky a postupně odhalovat pravdu,
+        zatímco hledá cestu ven.
+    </p>
+</section>
+
+<section class="card fade-in">
+    <h2>Herní prvky</h2>
+    <ul>
+        <li>🌴 Otevřený ostrov k průzkumu</li>
+        <li>🧩 Logické hádanky</li>
+        <li>👁️ Stealth mechaniky</li>
+        <li>🎬 Více možných konců</li>
+    </ul>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="gallery fade-in">
+    <h2>Galerie</h2>
+    <div class="grid">
+        <img src="AK-47_sunset.png" alt="Screenshot 1" class="clickable">
+        <img src="ostrov.png" alt="Screenshot 2" class="clickable">
+        <img src="hz.webp" alt="Screenshot 3" class="clickable">
+    </div>
+</section>
+
+<!-- ===== Stahnout ===== -->
+<section id="download" class="card fade-in">
+    <h2>Stáhnout</h2>
+    <p>nedostupné</p>
+</section>
+
+<!-- ===== autorska prava ===== -->
+<footer class="fade-in">
+    <p>© 2026 Escape from Island – Fan projekt</p>
+</footer>
+
+<!-- ===== zvetsit obrazek ===== -->
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

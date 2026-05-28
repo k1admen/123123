@@ -1,1 +1,3 @@
-# 123123
+Rafael = Captain, Designer
+Nikita = CopyWriter, Programmer
+David = assistent
