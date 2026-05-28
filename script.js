@@ -14,6 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.classList.toggle("open");
             toggle.setAttribute("aria-expanded", String(menu.classList.contains("open")));
         });
+
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".menu-items a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+            link.classList.add("active-link");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+
     }
 
     const btn = document.getElementById("infoBtn");
@@ -45,6 +63,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const themeBtn = document.querySelector(".theme-toggle");
     const icon = themeBtn?.querySelector(".icon");
+
+    const applyTheme = theme => {
+        const isLight = theme === "light";
+        document.body.classList.toggle("light", isLight);
+        if (icon) icon.textContent = isLight ? "☀️" : "🌙";
+        localStorage.setItem(STORAGE_KEYS.theme, isLight ? "light" : "dark");
+    };
+
+    const savedTheme = localStorage.getItem(STORAGE_KEYS.theme) || "dark";
+    applyTheme(savedTheme);
+
+    if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+            const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
+            applyTheme(nextTheme);
     if (themeBtn && icon) {
         themeBtn.addEventListener("click", () => {
             document.body.classList.toggle("light");
@@ -64,6 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const key = el.dataset.i18nPlaceholder;
             if (pack[key]) el.setAttribute("placeholder", pack[key]);
         });
+        localStorage.setItem(STORAGE_KEYS.lang, lang);
+    };
+
+    if (langSelect) {
+        const saved = localStorage.getItem(STORAGE_KEYS.lang) || "cs";
         localStorage.setItem("lang", lang);
     };
 
